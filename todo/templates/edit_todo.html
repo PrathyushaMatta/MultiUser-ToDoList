@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit todo</title> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/todo.css' %}">
+    <script src="https://kit.fontawesome.com/cb792c0850.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="sigup-login">
+        <div>
+            <h1 class="greeting">Hello {{user.username}},</h1>
+        </div>
+        <br>
+        <br>
+        <div class="signup-box">
+                <div class="tagline">
+                    ✏️ Edit Your Task
+                </div>
+                <form method="post">
+                    {% csrf_token %}
+                    <input type="text" name="title" class="inp" required placeholder="Edit Your Task" value="{{ obj.title }}">
+                    <br><br>
+                    <center><input type="submit" class="submit-button" value="Update Task"></center>
+                </form>
+                {% for todo in res%}
+                <div class="Todo">
+                    <!--<h5>{{todo.srno}}</h5>-->
+                    <p>{{todo.title}}</p>
+                    <div >
+                        <a href="/edit_todo/{{todo.srno}}"><i class="fa-solid fa-pen-to-square"></i></a>
+                        <a href="/delete_todo/{{todo.srno}}"><i class="fa-solid fa-trash"></i></a>
+                    </div>
+                </div>
+                {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

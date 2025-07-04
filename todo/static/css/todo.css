@@ -1,0 +1,156 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: url('/static/images/nature-bg-2.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding-top: 50px;
+}
+
+/* Wrapper */
+.sigup-login {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 40px 30px;
+    border-radius: 18px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    width: 95%;
+    max-width: 600px;
+    backdrop-filter: blur(1px);
+    animation: fadeInNature 0.8s ease;
+}
+
+/* Header */
+.heading {
+    font-size: 30px;
+    font-weight: bold;
+    color: #2e7d32;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Logout Icon */
+.anac {
+    text-align: right;
+    margin-bottom: 15px;
+}
+.sign {
+    color: #ffffff;
+    font-size: 18px;
+    transition: 0.3s ease;
+}
+.sign:hover {
+    transform: scale(1.1);
+    color: #1b5e20;
+}
+
+/* Form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+input.inp {
+    padding: 12px 15px;
+    border-radius: 10px;
+    border: 1px solid #c8e6c9;
+    background-color: #f1f8e9;
+    font-size: 16px;
+}
+input.inp:focus {
+    border-color: #66bb6a;
+    box-shadow: 0 0 10px rgba(102, 187, 106, 0.3);
+}
+.submit-button {
+    padding: 12px;
+    background-color: #388e3c;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.submit-button:hover {
+    background-color: #2e7d32;
+    transform: scale(1.03);
+}
+
+/* Todo cards */
+.Todo {
+    background-color: #e8f5e9;
+    border: 2px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: growIn 0.6s ease;
+}
+.Todo h5 {
+    font-size: 16px;
+    color: #1b5e20;
+    margin: 0;
+}
+.Todo p {
+    flex: 1;
+    margin: 0 20px;
+    font-size: 16px;
+    color: #4e4e4e;
+}
+.Todo div a {
+    margin-left: 12px;
+    color: #4caf50;
+    font-size: 16px;
+}
+.Todo div a:hover {
+    color: #2e7d32;
+    transform: scale(1.1);
+}
+
+/* Animations */
+@keyframes growIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+/* Greeting Text */
+.greeting {
+    font-size: 28px;
+    font-weight: 600;
+    color: #051e05;
+    margin-bottom: 10px;
+    animation: fadeInNature 0.6s ease;
+}
+.nature-quote {
+    font-size: 26px;
+    font-weight: 700;
+    color: #042505;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 0.5px;
+    text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.6);
+    animation: fadeInNature 1s ease-in-out;
+}
+
+.tagline {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+.heading, .tagline {
+    color: #ffffff; /* Bright white */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6); /* Soft black glow */
+}
